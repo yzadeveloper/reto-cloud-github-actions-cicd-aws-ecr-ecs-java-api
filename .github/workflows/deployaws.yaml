@@ -28,7 +28,7 @@ name: Deploy Spring Boot API to ECS Fargate
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/cicd" ]
 
 env:
   AWS_REGION: us-west-2                  # set this to your preferred AWS region, e.g. us-west-1
