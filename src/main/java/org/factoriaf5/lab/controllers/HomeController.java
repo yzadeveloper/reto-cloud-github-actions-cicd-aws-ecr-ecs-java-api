@@ -10,7 +10,7 @@ public class HomeController {
 
     @GetMapping("")
     public String index() {
-        return new String("Hello AWS! I like ECR & ECS. Workflow is great!");
+        return new String("Hello from github");
     }
 
 }
