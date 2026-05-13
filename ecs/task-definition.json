@@ -1,0 +1,36 @@
+{
+  "family": "spring-api-task",
+  "taskRoleArn": "arn:aws:iam::421406873989:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::421406873989:role/LabRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "containerDefinitions": [
+    {
+      "name": "spring-api",
+      "image": "421406873989.dkr.ecr.us-west-2.amazonaws.com/spring-api:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "systemControls": []
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": []
+}
